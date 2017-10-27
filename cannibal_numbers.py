@@ -33,11 +33,11 @@ def findRemainingCannibals(query, numArray):
 	return count	
 
 def findCannibalNumbers():
+	countList = []
 	for query in queryNumbers:
 		numberArray = list(givenNumbers)
-		#count = removeGtEq(query, numberArray)
-		count = findRemainingCannibals(query, numberArray)
-		print count
+		countList.append(findRemainingCannibals(query, numberArray))
+	print countList
 
 
 findCannibalNumbers()
